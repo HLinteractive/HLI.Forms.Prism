@@ -1,0 +1,32 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard1.4</TargetFramework>
+    <PackageTargetFallback>portable-net45+win8+wpa81+wp8</PackageTargetFallback>
+    <DebugType>full</DebugType>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+    <Authors>HL interactive, Thomas Hagström</Authors>
+    <Company>HL interactive</Company>
+    <Description>Xamarin.Forms Prism Pages with SetAutowireViewModel, MVVM View Model Base classes, services, extensions etc</Description>
+    <Copyright>Copyright © HL Interactive 2017 Stockholm Sweden</Copyright>
+    <PackageLicenseUrl>https://raw.githubusercontent.com/HLinteractive/HLI.Forms.Prism/master/LICENSE</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/HLinteractive/HLI.Forms.Prism</PackageProjectUrl>
+    <PackageIconUrl>https://dl.dropboxusercontent.com/u/1027259/hliicon.ico</PackageIconUrl>
+    <RepositoryUrl>https://github.com/HLinteractive/HLI.Forms.Prism.git</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>Xamarin,Xamarin-Forms,Prism,MVVM,Navigation</PackageTags>
+    <PackageReleaseNotes>Netstandard VS2017</PackageReleaseNotes>
+    <Version>1.0.0-beta</Version>
+    <NeutralLanguage>sv-SE</NeutralLanguage>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="HLI.Core" Version="1.0.5.3" />
+    <PackageReference Include="HLI.Forms.Core" Version="1.0.0-rc" />
+    <PackageReference Include="HLI.Globalization" Version="1.0.0" />
+    <PackageReference Include="Prism.Forms" Version="6.3.0" />
+    <PackageReference Include="Xamarin.Forms" Version="2.3.4.247" />
+  </ItemGroup>
+
+</Project>
