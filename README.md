@@ -26,51 +26,51 @@ Xamarin.Forms Prism Pages, MVVM View Model Base classes, services, extensions et
 You can set the Prism naming policy to determine what directory is used for each MVVM part. Each parameter is optional with the below default values.   
 Example **`App.xaml.cs`** (inherits `PrismApplication`):
 
-	```csharp
+```csharp
     protected override void ConfigureViewModelLocator()
     {
         base.ConfigureViewModelLocator();
         this.SetViewModelNamingPolicy("MyPageFolder", "MyViewModelFolder", "PageSuffix", "ViewModelSuffix");
     }
-	```
+```
 
 #### ICommand
 To easily update an `ICommand`s `CanExecute` there's an extension:
 
-	```csharp
+```csharp
 	ICommand SaveCommand { get; set; }
 	SaveCommand.RaiseCanExecute();
-	```
+```
 
 #### Navigation
 To navigate Prism deep links you use a path such as "MyTabbedPage/MyNavigationPage/UserPage". Since these are page classes you can use the `PageNamesToUri` helper to get typed `Page` names instead of strings: 
 	
-	```csharp
+```csharp
 	await this.NavigationService.NavigateAsync(NavigationExtensions.PageNamesToUri(nameof(MyNavigationPage), nameof(MyTabbedPage), nameof(UserPage);
-	```
+```
 
 When recieving Prism `NavigationParameters` you want to type check these. To help with this `NavigationParameters` has extensions to get as a specific type:
 
-	```csharp
+```csharp
 	Guid query = parameters.GetParameterAsGuid("Id");
-	```
+```
 
 Similarily there's `GetParameterAsInt` and `GetParameterAsType` where you supply an type argument:
 
-	```csharp
+```csharp
 	var feedback = parameters.GetParameterAsType<HliFeedbackMessage>("Feedback");
-	```
+```
 
 ### Prism Page base classes
 Prism base classes that call `SetAutowireViewModel` automatically and load resources from your `App` class.
 
 Import the namespace and use as base class for your pages:
 
-	```xaml
+```xaml
 	<pages:HliContentPage
 	xmlns:pages="clr-namespace:HLI.Forms.Prism.Pages;assembly=HLI.Forms.Prism"
 	HasNavigationBar="True">
-	```
+```
 
 ### ViewModel list/detail base classes
 Working with MVVM there are lot of demands on your View Models; navigation, commands, busy indication etc. This library contains Prism based base classes that help set up a new project quickly; allowing list/detail View Model pattern using factories.
@@ -81,12 +81,12 @@ Say we want our app to start at the "login" Page, where the **Model** is "User".
 2. Create "LoginPage" in CS or XAML (using **[the base class](#pages)**)
 3. Create "LoginViewModel". Inherit the `HliViewModel` base class:
 
-	```csharp
+```csharp
 	public class LoginViewModel : HliViewModel<User>
 	{
 		// TODO: Constructor
 	}
-	```
+```
 
 4. Register the page for navigation in `App.xaml.cs` according to Prism documentation.  
 Your ViewModel will now be registered with the Page and have a great deal of code for free.  
