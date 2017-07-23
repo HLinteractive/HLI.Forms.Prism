@@ -1,20 +1,26 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard1.4</TargetFramework>
+
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <PackageTargetFallback>portable-net45+win8+wpa81+wp8</PackageTargetFallback>
     <DebugType>full</DebugType>
-    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-    <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
-    <Authors>HL interactive, Thomas Hagström</Authors>
+    <Authors>Thomas Hagström, HL Interactive</Authors>
     <Company>HL interactive</Company>
-    <Description>Xamarin.Forms Prism Pages with SetAutowireViewModel, MVVM View Model Base classes, services, extensions etc</Description>
+    <GenerateAssemblyConfigurationAttribute>true</GenerateAssemblyConfigurationAttribute>
+    <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
     <Copyright>Copyright © HL Interactive 2017 Stockholm Sweden</Copyright>
-    <PackageLicenseUrl>https://raw.githubusercontent.com/HLinteractive/HLI.Forms.Prism/master/LICENSE</PackageLicenseUrl>
-    <PackageProjectUrl>https://github.com/HLinteractive/HLI.Forms.Prism</PackageProjectUrl>
     <PackageIconUrl>https://dl.dropboxusercontent.com/u/1027259/hliicon.ico</PackageIconUrl>
-    <RepositoryUrl>https://github.com/HLinteractive/HLI.Forms.Prism.git</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
+    <TargetFramework>netstandard1.4</TargetFramework>
+    <Product>$(AssemblyName) ($(TargetFramework))</Product>
+    <DefaultLanguage>sv-SE</DefaultLanguage>
+    <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+    
+    <PackageLicenseUrl>https://raw.githubusercontent.com/HLinteractive/HLI.Forms.Prism/master/LICENSE</PackageLicenseUrl>
+    <Description>Xamarin.Forms Prism Pages with SetAutowireViewModel, MVVM View Model Base classes, services, extensions etc</Description>
+    <PackageProjectUrl>https://github.com/HLinteractive/HLI.Forms.Prism</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/HLinteractive/HLI.Forms.Prism.git</RepositoryUrl>
     <PackageTags>Xamarin,Xamarin-Forms,Prism,MVVM,Navigation</PackageTags>
     <PackageReleaseNotes>Netstandard VS2017</PackageReleaseNotes>
     <Version>1.0.0-beta</Version>
