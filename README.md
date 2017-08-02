@@ -18,6 +18,8 @@
 # HLI.Forms.Prism #
 Xamarin.Forms Prism Pages, MVVM View Model Base classes, services, extensions etc.
 
+[![NuGet](https://img.shields.io/nuget/v/HLI.Forms.Prism.svg)
+![Downloads](https://img.shields.io/nuget/dt/HLI.Forms.Prism.svg)](https://preview.nuget.org/packages/HLI.Forms.Prism/)
 ![Build Status VSTS](https://nodessoft.visualstudio.com/_apis/public/build/definitions/3ed91d4b-9b9f-4c69-b511-406908c52385/24/badge)
 
 ## Usage
@@ -108,6 +110,9 @@ Download the nuget package through Package Manager Console:
 	* HLI.Globalization
 	* Prism.Forms
 	* Xamarin.Forms
+* **Tools**
+	* Windows 8.1 SDK
+	* Windows 10 SDK
 
 ## NuGet Package Generation
 The project is configured to automatically generate a ***.nupkg** upon build with **`dotnet cli`**.
@@ -123,4 +128,5 @@ The project is configured to automatically generate a ***.nupkg** upon build wit
 		* **Pages** - Xamarin.Forms `Page` base classes (above)
 
 ## Changes and backward compatibility
+* Multi-target PCL / UAP 10 / NetStandard 1.4
 * VS2017 CsProj based package generation to netstandard 1.4
